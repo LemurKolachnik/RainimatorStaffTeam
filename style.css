@@ -42,3 +42,55 @@ body{
   font-family: "Coatlani" !important;
   font-size: 26px;
 }
+
+.live{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 12px;
+}
+
+.box{
+  background: #101016;
+  border: 1px solid #2a2a34;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.label{
+  font-size: 12px;
+  opacity: 0.7;
+  margin-bottom: 8px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+#englishInput{
+  width: 100%;
+  min-height: 140px;
+  resize: vertical;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #2a2a34;
+  background: #0f0f12;
+  color: #eaeaf0;
+  font-size: 18px;
+  line-height: 1.35;
+  outline: none;
+}
+
+#englishInput:focus{
+  border-color: #4b4b66;
+}
+
+.coatlaniOutput{
+  font-family: "Coatlani" !important;
+  font-size: 28px;
+  line-height: 1.35;
+  white-space: pre-wrap; /* keeps newlines */
+  min-height: 140px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #2a2a34;
+  background: #0f0f12;
+}
