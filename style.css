@@ -1,12 +1,13 @@
 @font-face {
   font-family: "Coatlani";
-  src: url("fonts/Coatlani.woff2") format("woff2");
+  src: url("fonts/Coatlani.tff") format("tff");
   font-weight: normal;
   font-style: normal;
 }
 
+/* Base page */
 body {
-  font-family: system-ui, sans-serif;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   padding: 40px;
   background: #0f0f12;
   color: #eaeaf0;
@@ -20,33 +21,29 @@ body {
   max-width: 900px;
 }
 
-h1 { margin-top: 0; }
-
-.sample {
-  font-family: "Coatlani", sans-serif;
-  font-size: 36px;
-  line-height: 1.25;
-  margin-top: 16px;
+/* Table */
+.alphabet {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
-.row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  margin-top: 18px;
+.alphabet th,
+.alphabet td {
+  border-bottom: 1px solid #2a2a34;
+  padding: 10px 14px;
+  text-align: left;
 }
 
-.box {
-  background: #101016;
-  border: 1px solid #2a2a34;
-  border-radius: 12px;
-  padding: 16px;
+/* Force English column to use the default UI font */
+.alphabet td:nth-child(1),
+.alphabet th:nth-child(1) {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-.label {
-  font-size: 12px;
-  opacity: 0.7;
-  margin-bottom: 8px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+/* Force Coatlani column to use the custom font */
+.alphabet td:nth-child(2),
+.alphabet th:nth-child(2) {
+  font-family: "Coatlani", system-ui, sans-serif;
+  font-size: 26px;
 }
