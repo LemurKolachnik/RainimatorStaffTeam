@@ -24,7 +24,7 @@ body{
 /* Keep the table from spanning the whole screen */
 .alphabet{
   width: auto;              /* <- don't force 100% */
-  max-width: 520px;         /* <- pick whatever you like */
+  max-width: 520px;         
   border-collapse: collapse;
   margin: 0 auto;           /* <- center it */
 }
