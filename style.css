@@ -16,30 +16,19 @@ body{
 
 /* Keep the table from spanning the whole screen */
 .alphabet{
-  width: auto;              /* <- don't force 100% */
-  max-width: 520px;         /* <- pick whatever you like */
+  width: 360px;
+  table-layout: fixed;
   border-collapse: collapse;
-  margin: 0 auto;           /* <- center it */
+  margin: 0 auto;
 }
 
-/* Make columns behave */
-.alphabet th,
-.alphabet td{
-  border-bottom: 1px solid #2a2a34;
-  padding: 10px 14px;
-  white-space: nowrap;      /* <- stops wrapping */
-}
-
-/* Tight, intentional column widths */
 .alphabet th:nth-child(1),
-.alphabet td:nth-child(1){
-  width: 140px;             /* English column */
-}
+.alphabet td:nth-child(1){ width: 180px; }
 
 .alphabet th:nth-child(2),
 .alphabet td:nth-child(2){
-  width: 120px;             /* Coatlani column */
-  text-align: center;       /* looks nicer for glyphs */
+  width: 180px;
+  text-align: center;
   font-family: "Coatlani" !important;
   font-size: 26px;
 }
