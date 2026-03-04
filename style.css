@@ -6,43 +6,40 @@
 }
 
 /* Base page */
-body {
+body{
+  background:#0f0f12;
+  color:#eaeaf0;
+  margin:0;
+  padding:40px;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  padding: 40px;
-  background: #0f0f12;
-  color: #eaeaf0;
 }
 
-.card {
-  background: #17171d;
-  border: 1px solid #2a2a34;
-  border-radius: 16px;
-  padding: 24px;
-  max-width: 900px;
-}
-/* Table base */
-.alphabet {
-  width: 100%;
+/* Keep the table from spanning the whole screen */
+.alphabet{
+  width: auto;              /* <- don't force 100% */
+  max-width: 520px;         /* <- pick whatever you like */
   border-collapse: collapse;
-  margin-top: 20px;
+  margin: 0 auto;           /* <- center it */
 }
 
+/* Make columns behave */
 .alphabet th,
-.alphabet td {
+.alphabet td{
   border-bottom: 1px solid #2a2a34;
   padding: 10px 14px;
-  text-align: left;
+  white-space: nowrap;      /* <- stops wrapping */
 }
 
-/* English column stays normal */
-.alphabet td:nth-child(1),
-.alphabet th:nth-child(1) {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+/* Tight, intentional column widths */
+.alphabet th:nth-child(1),
+.alphabet td:nth-child(1){
+  width: 140px;             /* English column */
 }
 
-/* Coatlani column forced to custom font */
-.alphabet td:nth-child(2),
-.alphabet th:nth-child(2) {
+.alphabet th:nth-child(2),
+.alphabet td:nth-child(2){
+  width: 120px;             /* Coatlani column */
+  text-align: center;       /* looks nicer for glyphs */
   font-family: "Coatlani" !important;
   font-size: 26px;
 }
