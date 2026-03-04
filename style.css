@@ -1,1 +1,52 @@
+@font-face {
+  font-family: "Coatlani";
+  src: url("fonts/Coatlani.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 
+body {
+  font-family: system-ui, sans-serif;
+  padding: 40px;
+  background: #0f0f12;
+  color: #eaeaf0;
+}
+
+.card {
+  background: #17171d;
+  border: 1px solid #2a2a34;
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 900px;
+}
+
+h1 { margin-top: 0; }
+
+.sample {
+  font-family: "Coatlani", sans-serif;
+  font-size: 36px;
+  line-height: 1.25;
+  margin-top: 16px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.box {
+  background: #101016;
+  border: 1px solid #2a2a34;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.label {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-bottom: 8px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
