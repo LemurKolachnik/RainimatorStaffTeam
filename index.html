@@ -63,8 +63,36 @@
     <tr><td>Z</td><td>Z</td></tr>
   </tbody>
 </table>
-  <p style="font-family:'Coatlani', sans-serif; font-size:32px;">
-  IF THIS LINE DOES NOT CHANGE RAH
-</p>
+  
+ <div class="card" style="margin-top:24px;">
+  <h2 style="margin:0 0 12px 0;">Live Translator</h2>
+
+  <div class="live">
+    <div class="box">
+      <div class="label">English</div>
+      <textarea id="englishInput" placeholder="Type here..."></textarea>
+    </div>
+
+    <div class="box">
+      <div class="label">Coatlani</div>
+      <div id="coatlaniOutput" class="coatlaniOutput"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const input = document.getElementById("englishInput");
+  const output = document.getElementById("coatlaniOutput");
+
+  function update() {
+    // If your font uses ligatures (tl/tz/ch/etc), this alone is enough:
+    output.textContent = input.value;
+
+    // If you later want custom mappings (like TL -> [ ), we can add that too.
+  }
+
+  input.addEventListener("input", update);
+  update();
+</script>
 </body>
 </html>
