@@ -84,11 +84,27 @@
   const input = document.getElementById("englishInput");
   const output = document.getElementById("coatlaniOutput");
 
-  function update() {
-    // If your font uses ligatures (tl/tz/ch/etc), this alone is enough:
-    output.textContent = input.value;
+  function toCoatlani(text) {
+    // Normalize to uppercase so matching is easy (your mapping table is uppercase)
+    let t = text.toUpperCase();
 
-    // If you later want custom mappings (like TL -> [ ), we can add that too.
+    // Order matters: do longer / more specific patterns first.
+    // Use word-boundary-ish logic? Not needed here; we want it anywhere in the text.
+    t = t
+      .replace(/TL/g, "[")
+      .replace(/TZ/g, "\\")   // backslash in JS string needs escaping
+      .replace(/CH/g, "]")
+      .replace(/CU/g, ",")
+      .replace(/UC/g, ",")
+      .replace(/HU/g, ".")
+      .replace(/UH/g, ".")
+      .replace(/QU/g, ";");
+
+    return t;
+  }
+
+  function update() {
+    output.textContent = toCoatlani(input.value);
   }
 
   input.addEventListener("input", update);
