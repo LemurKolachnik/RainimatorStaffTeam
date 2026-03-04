@@ -20,8 +20,7 @@ body {
   padding: 24px;
   max-width: 900px;
 }
-
-/* Table */
+/* Table base */
 .alphabet {
   width: 100%;
   border-collapse: collapse;
@@ -35,15 +34,15 @@ body {
   text-align: left;
 }
 
-/* Force English column to use the default UI font */
+/* English column stays normal */
 .alphabet td:nth-child(1),
 .alphabet th:nth-child(1) {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-/* Force Coatlani column to use the custom font */
+/* Coatlani column forced to custom font */
 .alphabet td:nth-child(2),
 .alphabet th:nth-child(2) {
-  font-family: "Coatlani", system-ui, sans-serif;
+  font-family: "Coatlani" !important;
   font-size: 26px;
 }
